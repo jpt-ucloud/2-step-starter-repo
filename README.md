@@ -1,22 +1,22 @@
-Example Voting App
+## Uffizzi Starter App - Establish an On-demand Uffizzi Environment in 2 steps
 =========
 
-A simple distributed application running across multiple Docker containers.
+## 1. Fork this Repo
+## 2. Open a PR of `double-dogs` branch against `main` in your fork
 
-This example was originally at https://github.com/dockersamples/example-voting-app
+The PR will trigger a series of [jobs](https://github.com/UffizziCloud/uffizzi-2-step-starter-app/blob/main/.github/workflows/uffizzi-environment.yml) with Uffizzi Github Action's re-useable [workflow](https://github.com/marketplace/actions/create-preview-environment) being utilized to create an on-demand environment for this example micro-services application.  The environment URL and Uffizzi Dashboard URL will be posted as a comment in your PR when the workflow completes.
 
-It has been modified to demonstrate Continuous Previews on [Uffizzi](https://github.com/UffizziCloud/uffizzi_app).
+-New commits will update the environment.  
+-Merging or Closing the PR will delete the environment.  
+-The environment is set to `delete` in 1hr 
 
-Getting started
----------------
+The environment is defined by [docker-compose](https://github.com/UffizziCloud/uffizzi-2-step-starter-app/blob/main/docker-compose.template.yml).
 
-## Uffizzi
+From within the Uffizzi Dashboard you can view logs and events, manage projects, manage teams, set RBAC, set SSO, and establish password protected URLs.
 
-We recommend using the reusable workflow from the Uffizzi `preview-action.`
+**Note-** Running this workflow will create a free Uffizzi Platform account under the Github account from which it is initiated.  Each account receives 10,000 preview minutes per month for free.  If you exceed the free tier threshold your services will be paused until you provide a credit card.  Users are not liable for paid services unless they authorize billing.
 
-## Linux Containers
-
-The Linux stack uses Python, Node.js, .NET Core (or optionally Java), with Redis for messaging and Postgres for storage.
+Using Uffizzi for Crypto-mining, bots and other unauthorized activities is strictly prohibited per the user policy.  Users who break the service agreement are at risk of being banned from future use.  
 
 Architecture
 -----
